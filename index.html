@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content="Menu for 297 Pizza"/>
+    <meta name="author" content="RAG"/>
+	
+    <title>297 Pizza Co.</title>
+
+<!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"/>
+
+<!-- Custom styles for this template -->
+<!--<link rel="stylesheet" href="./css/modifiedStyles.css"/ type="text/css"/>-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark my-0">
+      <a class="navbar-brand" href="#">297 Pizza Co.</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+<!-- Nav bar -->
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+		  
+<!-- comment out navbar code until needed only #Home is used -->
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li> -->
+        </ul>
+<!-- this form to log in or create account -->		
+		<form>
+			<div class="form-row my-0">
+				<div class="form-group col-md-4">
+					<input type="text" class="form-control" id="inlineFormInputName2" placeholder="User Name">
+				</div>	
+				<div class="form-group col-md-4">	
+					<input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="password">
+				</div>
+				<div class="form-group col-md-1.5">
+					<button type="submit" class="btn btn-primary">Log In</button>
+				</div>
+				<div class="form-group col-md-1">
+					<button type="button" class="btn btn-primary">Create Account</button>
+				</div>
+			</div>			
+		</form>
+      </div> 
+    </nav>
+<!-- /nav bar -->
+<!-- Main content -->
+    <main role="main">
+
+<!-- Main jumbotron -->
+      <div class="jumbotron"style="background-image: url(./img/mainPizza.jpg)";background-size: 100%;>   
+        <div class="container">
+          <h1 class="display-3">Order Your Pizza Now!</h1>
+          <p class="text-white font-weight-bold">At 297 Pizza Co. we only use the freshest ingredients.</p>
+<!--comment out find us button -->
+		  <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Find Us &raquo;</a></p> -->
+        </div>
+      </div>
+<!-- container for main content -->
+      <div class="container">
+<!-- Two rows of three columns for menu selections -->
+<!-- The user selects through check box or radio button to customize pizza. jQuery is used to toggle up the list items. JavaScript to query the check boxes and show selection-->
+        <div class="row">
+          <div class="col-md-4">
+            <h2>SIZE</h2>
+			<div class="form-check size">
+				<label class="form-check-label"><input class="form-check-input" type="radio" name="sizeRadios" id="sizeRadiosSmall" value="Small" checked>Small Pizza&mdash;$6.00</label><br/>
+				<label class="form-check-label"><input class="form-check-input" type="radio" name="sizeRadios" id="sizeRadiosMedium" value="Medium">Medium Pizza&mdash;$10.00</label><br/>
+				<label class="form-check-label"><input class="form-check-input" type="radio" name="sizeRadios" id="sizeRadiosLarge" value="Large">Large Pizza&mdash;$14.00</label><br/>
+				<label class="form-check-label"><input class="form-check-input" type="radio" name="sizeRadios" id="SizeRadiosExtraLarge" value="Extra Large">Extra Large Pizza&mdash;$16.00</label><br/>
+			</div>
+			<p>
+				<button type="button" class="btn btn-secondary" id="sizeBtn">Chose SIZE</button>
+			</p>
+            <p>We have four sizes to choose from: Small (10 cm diameter), Medium (14cm), Large (24cm), and Extra Large (48cm). (Some genius in marketing tried to rename our small size as a personal size. We stopped that nonsense. Come on dude, "personal" is not a size!)</p>
+            <p>Our small pizzas are $6.00, medium pizzas are $10.00, large pizzas are $14.00, and extra large pizzas are $16.00.</p>
+			<p>Our more clever customers will realize that with a linear increase in pizza diameter the edible pizza area increases quadratically! Our larger pizza are the better value. </p>
+          </div>
+          <div class="col-md-4">
+            <h2>MEAT</h2>
+			<div class="form-check meat">
+				<label class="form-check-label"><input class="form-check-input" type="checkbox" name="meatBox" value="Anchovy">Anchovy (our favorite)</label><br/>
+				<label class="form-check-label"><input class="form-check-input" type="checkbox" name="meatBox" value="Canadian Bacon">Canadian Bacon</label><br/>
+				<label class="form-check-label"><input class="form-check-input" type="checkbox" name="meatBox" value="Chicken">Chicken (why?)</label><br/>
+				<label class="form-check-label"><input class="form-check-input" type="checkbox" name="meatBox" value="Ground Beef">Ground Beef (Boring!)</label><br/>
+				<label class="form-check-label"><input class="form-check-input" type="checkbox" name="meatBox" value="Linguiça">Linguiça</label><br/>
+				<label class="form-check-label"><input class="form-check-input" type="checkbox" name="meatBox" value="Pepperoni">Pepperoni</label><br/>
+			</div>
+				<p><button type="button" class="btn btn-secondary" id="meatBtn">Chose MEAT</button></p>			
+				<p>All of our meats are locally sourced (except  anchovies). Our customers seem to think that the quality is better if we get the meat from down the street. </p>
+				<p>We have Pepperoni, Linguiça, Canadian Bacon, Ground Beef (Boring!), Anchovy (our favorite), and Chicken (why?)</p>
+				<p>Chose any one meat for your pizza, additional meat selections are $1.00 each.</p>
+			</div>
+		  <div class="col-md-4">
+			<h2>VEGGIES!</h2>
+				<div class="form-check veggie">
+					<label class="form-check-label"><input class="form-check-input" type="checkbox" name="veggieBox" value="Green Peppers">Green Peppers</label><br/>
+					<label class="form-check-label"><input class="form-check-input" type="checkbox" name="veggieBox" value="Jalapenos">Jalapenos</label><br/>
+					<label class="form-check-label"><input class="form-check-input" type="checkbox" name="veggieBox" value="Mushrooms">Mushrooms</label><br/>
+					<label class="form-check-label"><input class="form-check-input" type="checkbox" name="veggieBox" value="Olives">Olives</label><br/>
+					<label class="form-check-label"><input class="form-check-input" type="checkbox" name="veggieBox" value="Onions">Onions</label><br/>
+					<label class="form-check-label"><input class="form-check-input" type="checkbox" name="veggieBox" value="Pineapples">Pineapples</label><br/>
+					<label class="form-check-label"><input class="form-check-input" type="checkbox" name="veggieBox" value="Spinaches">Spinaches</label><br/>
+					<label class="form-check-label"><input class="form-check-input" type="checkbox" name="veggieBox" value="Tomatoes">Tomatoes</label><br/>
+				</div>
+			<p>
+				<button type="button" class="btn btn-secondary" id="veggieBtn">Chose VEGGIES</button>
+			</p>
+            <p>We have eight choices of vegetable matter from which to chose (technically, one is a fungus, but . . .). Our veggie toppings are: Tomatoes, Onions, Olives, Green Peppers, Mushrooms, Pineapples, Spinaches, and Jalapenos.</p>
+			<p>Our Jalapenos are pickeled and the Olives and Pineapples come from cans, but everything else is mostly fresh.</p>
+			<p>Chose any one veggie for your pizza, additional veggie toppings are $1.00 each.</p>
+        </div>
+		</div>
+		<div class="row">
+          <div class="col-md-4">
+            <h2>CHEESE</h2>
+			<div class="form-check cheese">
+				<label class="form-check-label"><input class="form-check-input" type="radio" name="cheeseRadios" id="cheeseRadiosReg" value="Regular Cheese" checked>Regular&mdash;No Charge</label><br/>
+				<label class="form-check-label"><input class="form-check-input" type="radio" name="cheeseRadios" id="cheeseRadiosExtra" value="Extra Cheese">Extra Cheese&mdash;$3.00</label><br/>
+				<label class="form-check-label"><input class="form-check-input" type="radio" name="cheeseRadios" id="cheeseRadiosNone" value="No Cheese">No Cheese&mdash;No Charge</label><br/>
+			</div>
+			<p>
+				<button type="button" class="btn btn-secondary" id="cheeseBtn">Chose CHEESE</button>
+			</p>
+            <p>We only have one type of cheese, we call it regular cheese. You can have extra regular cheese for $3.00 more.</p>
+			<p>If you don't want cheese, let us know. But we won't reduce the price.</p>
+          </div>
+          <div class="col-md-4">
+            <h2>CRUST</h2>
+			<div class="form-check crust">
+				<label class="form-check-label"><input class="form-check-input" type="radio" name="crustRadios" id="crustRadiosThin" value="Thin Crust" checked>Thin Crust&mdash;No Charge</label><br/>
+				<label class="form-check-label"><input class="form-check-input" type="radio" name="crustRadios" id="crustRadiosGarlic" value="Garlic Butter Crust">Garlic Butter&mdash;No Charge</label><br/>
+				<label class="form-check-label"><input class="form-check-input" type="radio" name="crustRadios" id="crustRadiosSpicy" value="Spicy Crust">Spicy&mdash;No Charge</label><br/>
+				<label class="form-check-label"><input class="form-check-input" type="radio" name="crustRadios" id="crustRadiosSpecial" value="The House's Special Crust">House Special&mdash;No Charge</label><br/>
+				<label class="form-check-label"><input class="form-check-input" type="radio" name="crustRadios" id="crustRadiosCheese" value="Crust Stuffed with Cheese">Stuffed with Cheese&mdash;$3.00</label><br/>
+			</div>
+			<p>
+				<button type="button" class="btn btn-secondary" id="crustBtn">Chose CRUST</button>
+			</p>
+            <p>We have hand tossed thin crust and for the vulgur rabble we have garlic butter crust, cheese stuffed crust (an abomination), spicy crust, and the house's special crust (don't ask what makes it special).</p>
+			<p>If you order the cheese stuffed srust we are going to charge you an extra $3.00, not becasue it costs us more, but because we care about you.</p>
+
+          </div>
+          <div class="col-md-4">
+            <h2>SAUCE</h2>
+			<div class="form-check sauce">
+				<label class="form-check-label"><input class="form-check-input" type="radio" name="sauceRadios" id="sauceRadiosMarinara" value="Marinara Sauce" checked>Marinara&mdash;No Charge</label><br/>
+				<label class="form-check-label"><input class="form-check-input" type="radio" name="sauceRadios" id="sauceRadiosBechamel" value="Bechamel Sauce">Béchamel&mdash;No Charge</label><br/>
+				<label class="form-check-label"><input class="form-check-input" type="radio" name="sauceRadios" id="sauceRadiosBarbeque" value="Barbeque Sauce">Barbeque&mdash;No Charge</label><br/>
+				<label class="form-check-label"><input class="form-check-input" type="radio" name="sauceRadios" id="sauceRadiosNone" value="No Sauce">None at all&mdash;No Charge</label><br/>
+			</div>
+			<p>
+				<button type="button" class="btn btn-secondary" id="sauceBtn">Chose SAUCE</button>
+			</p>
+            <p>Chose one of your delicious sauces, marinara, béchamel, barbeque, or none at all.</p>
+			<p>As far as our customers know, all of our sauces are made with fresh ingredients, daily. "None at all" is existentially the freshest sauce.</p>
+          </div>
+        </div>
+<!-- The button below calls the modal and onclick runs the showOrder function. this.onclick = null allows the user to run the function once -->		
+		<div>
+		  <button type="button" class="btn btn-primary" onclick="showOrder(); this.onclick = null;" data-toggle="modal" data-target="#orderModal">Place Your Order</button>
+		</div>
+      </div> 
+<!-- /container --> 
+	 </main> 
+<!-- /Main -->	 
+<!-- Modal -->
+	  <div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="orderModalLabel">Your Order</h5>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">	  
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+<!-- Modal body as table of three columns. Menu items and prices are passed to here -->			
+			<div class="modal-body">
+			  <div class="container">
+			    <div class="row">
+			      <div class="col-10">Your Selections</div>
+				  <div class="col-2">Price</div>
+				 </div>
+				   <div class="row">
+					<div class="col-2"></div>
+					<div class="col-8" id="displaySize">Size</div>
+					<div class="col-2" id="displaySizePrice">Size Price</div>
+				  </div>
+				  <div class="row">
+					<div class="col-2">Meats:</div>
+					<div class="col-8" id="displayMeat">Meats</div>
+					<div class="col-2" id="displayMeatPrice">Meats Price</div>
+				  </div>
+				  <div class="row">
+					<div class="col-2">Veggies:</div>
+					<div class="col-8" id="displayVeggie">Veggies</div>
+					<div class="col-2" id="displayVeggiePrice">Veggies Price</div>
+				  </div>
+				  <div class="row">
+					<div class="col-2"></div>
+					<div class="col-8" id="displayCheese">Cheese</div>
+					<div class="col-2" id="displayCheesePrice">Cheese Price</div>
+				  </div>
+				  <div class="row">
+					<div class="col-2"></div>
+					<div class="col-8" id="displayCrust">Crust</div>
+					<div class="col-2" id="displayCrustPrice">Crust Price</div>
+				  </div>
+				  <div class="row">
+					<div class="col-2"></div>
+					<div class="col-8" id="displaySauce">Sauce</div>
+					<div class="col-2" id="displaysaucePrice"></div>
+				  </div>
+				  <div class="row">
+					<div class="col-10 total"id="displayClose">Thank you for your order</div>
+					<div class="col-2 total" id="displayClosePrice">Total Price</div>
+				  </div>
+				</div>
+			    <div class="modal-footer">
+				  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			    </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+    <footer class="container">
+      <p>&copy; 297 Pizza Co 2017</p>
+    </footer>
+	
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- jQuery to hide and toggle menu lists-->
+	<script>
+/* jQuery to hide and show size options */	
+		$(document).ready(function(){
+			$('.size').hide();
+			$('#sizeBtn').click(function(){
+				$('.size').slideToggle('slow');
+			});
+		});	
+/* jQuery to hide and show meat options */		
+		$(document).ready(function(){
+			$('.meat').hide();
+			$('#meatBtn').click(function(){
+				$('.meat').slideToggle('slow');
+			});
+		});
+/* jQuery to hide and show veggie options */		
+		$(document).ready(function(){
+			$('.veggie').hide();
+			$('#veggieBtn').click(function(){
+				$('.veggie').slideToggle('slow');
+			});
+		});
+/* jQuery to hide and show cheese options */		
+		$(document).ready(function(){
+			$('.cheese').hide();
+			$('#cheeseBtn').click(function(){
+				$('.cheese').slideToggle('slow');
+			});
+		});
+/* jQuery to hide and show crust options */		
+		$(document).ready(function(){
+			$('.crust').hide();
+			$('#crustBtn').click(function(){
+				$('.crust').slideToggle('slow');
+			});
+		});
+/* jQuery to hide and show sauce options */		
+		$(document).ready(function(){
+			$('.sauce').hide();
+			$('#sauceBtn').click(function(){
+				$('.sauce').slideToggle('slow');
+			});
+		});
+	</script>
+	<script>
+/*The following code queries user selections and calcuated price to be returned on order modal*/
+/*The follow are the main variables declared and initialized for the functions*/
+/*Text variables*/	
+		var closeText = "Thank you for your order!"
+		var specialText = ""
+/*Query variables*/		
+		var selectedSize = document.querySelector("input[name='sizeRadios']:checked").value;
+		var selectedMeat = [];
+		var meatChecked = document.getElementsByName("meatBox");
+		var selectedVeggie = [];
+		var veggieChecked = document.getElementsByName("veggieBox");
+		var selectedCheese = document.querySelector("input[name='cheeseRadios']:checked").value;
+		var selectedCrust = document.querySelector("input[name='crustRadios']:checked").value;
+		var selectedSauce = document.querySelector("input[name='sauceRadios']:checked").value;
+/*Price variables*/		
+		var sizeTotal = 0;
+		var meatTotal = 0;
+		var veggieTotal = 0;
+		var crustTotal = 0;
+		var cheeseTotal = 0;
+		var priceTotal = 0;
+		var priceTotalDiscount = 0;
+/*showOrder() is the function to run the individual query functions and display the results*/
+	function showOrder() {
+		showSize();
+		showMeat();
+		showVeggie();
+		showCheese();
+		showCrust();
+		showSauce();
+		makePrice();
+		special();
+/*values placed in order modal*/		
+		document.getElementById("displaySize").innerHTML = selectedSize+" Pizza";
+		document.getElementById("displaySizePrice").innerHTML = "$"+sizeTotal.toFixed(2);
+		document.getElementById("displayMeat").innerHTML = selectedMeat.join(", ");
+		document.getElementById("displayMeatPrice").innerHTML = "$"+meatTotal.toFixed(2);
+		document.getElementById("displayVeggie").innerHTML = selectedVeggie.join(", ");
+		document.getElementById("displayVeggiePrice").innerHTML = "$"+veggieTotal.toFixed(2);
+		document.getElementById("displayCheese").innerHTML = selectedCheese;
+		document.getElementById("displayCheesePrice").innerHTML = "$"+cheeseTotal.toFixed(2);
+		document.getElementById("displayCrust").innerHTML = selectedCrust;
+		document.getElementById("displayCrustPrice").innerHTML = "$"+crustTotal.toFixed(2);
+		document.getElementById("displaySauce").innerHTML = selectedSauce;
+/*There is a price discount for two special combinationns. if the user selects either combination, then the discount price
+will be less than the total price. The minimum price is returned. If the user does not select a special combination, then both total proce and discount price are
+equal and minimum by default*/		
+		document.getElementById("displayClose").innerHTML = specialText+"<br/>"+"Your Price:"+"<br/>"+closeText;
+		document.getElementById("displayClosePrice").innerHTML = "<br/>"+"$"+Math.min(priceTotal, priceTotalDiscount).toFixed(2)+"<br/>";
+		
+		console.log("Final price: "+Math.min(priceTotal, priceTotalDiscount));
+	};
+/*Queries the size selected by the user. Size selection is by radio checks, only one entry allowed*/	
+	function showSize() {	
+			if (selectedSize == "Small") {
+				sizeTotal = 6;
+			} else if (selectedSize == "Medium") {
+				sizeTotal = 10;
+			} else if (selectedSize == "Large") {
+				sizeTotal = 14;
+			} else if (selectedSize == "Extra Large") {
+				sizeTotal = 16;
+			}
+		console.log("selected size: "+selectedSize);
+		console.log("size price: "+sizeTotal);
+	};	
+/*Queries the meat selected by the user. Meat selection is by check box, multiple entries allowed*/
+/*selected items are passed into an array*/	
+	function showMeat()	{
+		for (var i = 0; i < meatChecked.length; i++) {
+			if (meatChecked[i].checked) {
+				selectedMeat.push(meatChecked[i].value);
+				}
+		}
+/*The first meat selection is free, and each therafter is one dollar. Therefore, the total price for meat slections is the array size minus one*/		
+		var meatCount = selectedMeat.length;
+		meatTotal = (meatCount - 1);
+			if (meatTotal < 0) {
+			meatTotal = 0;
+
+			}
+		console.log("selected meats: "+selectedMeat);	
+		console.log("meats price: "+meatTotal);
+	};		
+/*Queries the  veggie selected by the user. Veggie selection is by check box, multiple entries allowed*/
+/*selected items are passed into an array*/			
+	function showVeggie() {
+		for (var i = 0; i < veggieChecked.length; i++) {
+			if (veggieChecked[i].checked) {
+				selectedVeggie.push(veggieChecked[i].value);
+				}
+		}
+/*The first veggie selection is free, and each therafter is one dollar. Therefore, the total price for veggie slections is the array size minus one*/		
+		var veggieCount = selectedVeggie.length;
+		veggieTotal = (veggieCount - 1);
+			if (veggieTotal < 0) {
+			veggieTotal = 0;
+
+			}
+		console.log("selected veggie: "+selectedVeggie);	
+		console.log("veggie price: "+veggieTotal);
+	};	
+/*Queries the cheese selected by the user. Cheese selection is by radio checks, only one entry allowed*/
+/*Only extra cheese incurs a costs*/	
+	function showCheese() {
+			if (selectedCheese == "Regular Cheese") {
+				cheeseTotal = 0;
+			} else if (selectedCheese == "Extra Cheese") {
+				cheeseTotal = 3;
+			} else if (selectedCheese == "No Cheese") {
+				cheeseTotal = 0;
+			}
+			console.log("selected cheese: "+selectedCheese);
+			console.log("cheese price: "+cheeseTotal);
+	};
+/*Queries the crust selected by the user. Crust selection is by radio checks, only one entry allowed*/
+/*Only cheese stuffed crust incurs a costs*/	
+	function showCrust() {
+			if (selectedCrust == "Thin Crust") {
+				crustTotal = 0;
+			} else if (selectedCrust == "Garlic Butter Crust") {
+				crustTotal = 0;
+			} else if (selectedCrust == "Spicy Crust") {
+				crustTotal = 0;
+			} else if (selectedCrust == "The House's Special Crust") {
+				crustTotal = 0;
+			} else if (selectedCrust == "Crust Stuffed with Cheese") {
+				crustTotal = 3;
+			}
+			console.log("selected crust: "+selectedCrust);
+			console.log("crust price: "+crustTotal);
+	};	
+/*Queries the sauce selected by the user. Sauce selection is by radio checks, only one entry allowed*/
+/*Sauce does not incur costs*/	
+	function showSauce() {
+		console.log("selected sauce: "+selectedSauce);
+	};
+/*calculates the price before and discount*/	
+	function makePrice() {
+		priceTotal = sizeTotal + meatTotal + veggieTotal + crustTotal + cheeseTotal;
+		console.log("price before discount: "+priceTotal);
+	}
+/*There are two special combinations. The first special is Linguiça and Onion; special price of 80% discount. The second combinaiton is Jalapenos and Pineapples;
+special price of 90% discount.*/	
+	function special() {
+		if (selectedMeat.length == 1 & selectedMeat.indexOf("Linguiça") == 0 & selectedVeggie.length == 1 & selectedVeggie.indexOf("Onions") == 0) {
+			priceTotalDiscount = priceTotal * 0.8;
+			specialText = "David Hiram Griggs Special!"
+			console.log("David Hiram Griggs discount");
+		} 	else if (selectedMeat.length == 0 & selectedVeggie.length == 2 & selectedVeggie.indexOf("Jalapenos") == 0 & selectedVeggie.indexOf("Pineapples") == 1) {
+			priceTotalDiscount = priceTotal * 0.9;
+			specialText = "Rick Sanchez Special!"
+			console.log("Rick Sanchez discount");
+		}	else { 
+			priceTotalDiscount = priceTotal;
+		}
+			console.log("price before discount: "+priceTotal);
+			console.log("price after discount: "+priceTotalDiscount);
+	};
+	</script>
+  
+  </body>
+</html>
