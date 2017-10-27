@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta name="description" content="Menu for 297 Pizza"/>
     <meta name="author" content="RAG"/>
+
 	
     <title>297 Pizza Co.</title>
 
@@ -85,7 +86,7 @@
           <div class="col-md-4">
             <h2>SIZE</h2>
 			<div class="form-check size">
-				<label class="form-check-label"><input class="form-check-input" type="radio" name="sizeRadios" id="sizeRadiosSmall" value="Small" checked>Small Pizza&mdash;$6.00</label><br/>
+				<label class="form-check-label"><input class="form-check-input" type="radio" name="sizeRadios" id="sizeRadiosSmall" value="Small">Small Pizza&mdash;$6.00</label><br/>
 				<label class="form-check-label"><input class="form-check-input" type="radio" name="sizeRadios" id="sizeRadiosMedium" value="Medium">Medium Pizza&mdash;$10.00</label><br/>
 				<label class="form-check-label"><input class="form-check-input" type="radio" name="sizeRadios" id="sizeRadiosLarge" value="Large">Large Pizza&mdash;$14.00</label><br/>
 				<label class="form-check-label"><input class="form-check-input" type="radio" name="sizeRadios" id="SizeRadiosExtraLarge" value="Extra Large">Extra Large Pizza&mdash;$16.00</label><br/>
@@ -136,7 +137,7 @@
           <div class="col-md-4">
             <h2>CHEESE</h2>
 			<div class="form-check cheese">
-				<label class="form-check-label"><input class="form-check-input" type="radio" name="cheeseRadios" id="cheeseRadiosReg" value="Regular Cheese" checked>Regular&mdash;No Charge</label><br/>
+				<label class="form-check-label"><input class="form-check-input" type="radio" name="cheeseRadios" id="cheeseRadiosReg" value="Regular Cheese">Regular&mdash;No Charge</label><br/>
 				<label class="form-check-label"><input class="form-check-input" type="radio" name="cheeseRadios" id="cheeseRadiosExtra" value="Extra Cheese">Extra Cheese&mdash;$3.00</label><br/>
 				<label class="form-check-label"><input class="form-check-input" type="radio" name="cheeseRadios" id="cheeseRadiosNone" value="No Cheese">No Cheese&mdash;No Charge</label><br/>
 			</div>
@@ -149,7 +150,7 @@
           <div class="col-md-4">
             <h2>CRUST</h2>
 			<div class="form-check crust">
-				<label class="form-check-label"><input class="form-check-input" type="radio" name="crustRadios" id="crustRadiosThin" value="Thin Crust" checked>Thin Crust&mdash;No Charge</label><br/>
+				<label class="form-check-label"><input class="form-check-input" type="radio" name="crustRadios" id="crustRadiosThin" value="Thin Crust">Thin Crust&mdash;No Charge</label><br/>
 				<label class="form-check-label"><input class="form-check-input" type="radio" name="crustRadios" id="crustRadiosGarlic" value="Garlic Butter Crust">Garlic Butter&mdash;No Charge</label><br/>
 				<label class="form-check-label"><input class="form-check-input" type="radio" name="crustRadios" id="crustRadiosSpicy" value="Spicy Crust">Spicy&mdash;No Charge</label><br/>
 				<label class="form-check-label"><input class="form-check-input" type="radio" name="crustRadios" id="crustRadiosSpecial" value="The House's Special Crust">House Special&mdash;No Charge</label><br/>
@@ -165,7 +166,7 @@
           <div class="col-md-4">
             <h2>SAUCE</h2>
 			<div class="form-check sauce">
-				<label class="form-check-label"><input class="form-check-input" type="radio" name="sauceRadios" id="sauceRadiosMarinara" value="Marinara Sauce" checked>Marinara&mdash;No Charge</label><br/>
+				<label class="form-check-label"><input class="form-check-input" type="radio" name="sauceRadios" id="sauceRadiosMarinara" value="Marinara Sauce">Marinara&mdash;No Charge</label><br/>
 				<label class="form-check-label"><input class="form-check-input" type="radio" name="sauceRadios" id="sauceRadiosBechamel" value="Bechamel Sauce">Béchamel&mdash;No Charge</label><br/>
 				<label class="form-check-label"><input class="form-check-input" type="radio" name="sauceRadios" id="sauceRadiosBarbeque" value="Barbeque Sauce">Barbeque&mdash;No Charge</label><br/>
 				<label class="form-check-label"><input class="form-check-input" type="radio" name="sauceRadios" id="sauceRadiosNone" value="No Sauce">None at all&mdash;No Charge</label><br/>
@@ -179,7 +180,7 @@
         </div>
 <!-- The button below calls the modal and onclick runs the showOrder function. this.onclick = null allows the user to run the function once -->		
 		<div>
-		  <button type="button" class="btn btn-primary" onclick="showOrder(); this.onclick = null;" data-toggle="modal" data-target="#orderModal">Place Your Order</button>
+		  <button type="button" class="btn btn-primary" onclick="showOrder();" data-toggle="modal" data-target="#orderModal">View Your Order</button>
 		</div>
       </div> 
 <!-- /container --> 
@@ -204,32 +205,32 @@
 				 </div>
 				   <div class="row">
 					<div class="col-2"></div>
-					<div class="col-8" id="displaySize">Size</div>
-					<div class="col-2" id="displaySizePrice">Size Price</div>
+					<div class="col-8" id="displaySize"></div>
+					<div class="col-2" id="displaySizePrice"></div>
 				  </div>
 				  <div class="row">
 					<div class="col-2">Meats:</div>
-					<div class="col-8" id="displayMeat">Meats</div>
-					<div class="col-2" id="displayMeatPrice">Meats Price</div>
+					<div class="col-8" id="displayMeat"></div>
+					<div class="col-2" id="displayMeatPrice"></div>
 				  </div>
 				  <div class="row">
 					<div class="col-2">Veggies:</div>
-					<div class="col-8" id="displayVeggie">Veggies</div>
-					<div class="col-2" id="displayVeggiePrice">Veggies Price</div>
+					<div class="col-8" id="displayVeggie"></div>
+					<div class="col-2" id="displayVeggiePrice"></div>
 				  </div>
 				  <div class="row">
 					<div class="col-2"></div>
-					<div class="col-8" id="displayCheese">Cheese</div>
-					<div class="col-2" id="displayCheesePrice">Cheese Price</div>
+					<div class="col-8" id="displayCheese"></div>
+					<div class="col-2" id="displayCheesePrice"></div>
 				  </div>
 				  <div class="row">
 					<div class="col-2"></div>
-					<div class="col-8" id="displayCrust">Crust</div>
-					<div class="col-2" id="displayCrustPrice">Crust Price</div>
+					<div class="col-8" id="displayCrust"></div>
+					<div class="col-2" id="displayCrustPrice"></div>
 				  </div>
 				  <div class="row">
 					<div class="col-2"></div>
-					<div class="col-8" id="displaySauce">Sauce</div>
+					<div class="col-8" id="displaySauce"></div>
 					<div class="col-2" id="displaysaucePrice"></div>
 				  </div>
 				  <div class="row">
@@ -238,7 +239,8 @@
 				  </div>
 				</div>
 			    <div class="modal-footer">
-				  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				  <button type="button" class="btn btn-secondary" onclick = "resetAll();" data-dismiss="modal">Place Your Order</button>
+				  <button type="button" class="btn btn-secondary" onclick = "resetAll();" data-dismiss="modal">Change Your Order</button>
 			    </div>
 			</div>
 		  </div>
@@ -298,6 +300,7 @@
 			$('.sauce').hide();
 			$('#sauceBtn').click(function(){
 				$('.sauce').slideToggle('slow');
+				
 			});
 		});
 	</script>
@@ -308,14 +311,18 @@
 		var closeText = "Thank you for your order!"
 		var specialText = ""
 /*Query variables*/		
-		var selectedSize = document.querySelector("input[name='sizeRadios']:checked").value;
+		var selectedSize = [];
+		var sizeChecked = document.getElementsByName("sizeRadios");
 		var selectedMeat = [];
 		var meatChecked = document.getElementsByName("meatBox");
 		var selectedVeggie = [];
 		var veggieChecked = document.getElementsByName("veggieBox");
-		var selectedCheese = document.querySelector("input[name='cheeseRadios']:checked").value;
-		var selectedCrust = document.querySelector("input[name='crustRadios']:checked").value;
-		var selectedSauce = document.querySelector("input[name='sauceRadios']:checked").value;
+		var selectedCheese = [];
+		var cheeseChecked = document.getElementsByName("cheeseRadios");
+		var selectedCrust = [];
+		var crustChecked = document.getElementsByName("crustRadios");
+		var selectedSauce = [];
+		var sauceChecked = document.getElementsByName("sauceRadios");
 /*Price variables*/		
 		var sizeTotal = 0;
 		var meatTotal = 0;
@@ -334,6 +341,7 @@
 		showSauce();
 		makePrice();
 		special();
+		
 /*values placed in order modal*/		
 		document.getElementById("displaySize").innerHTML = selectedSize+" Pizza";
 		document.getElementById("displaySizePrice").innerHTML = "$"+sizeTotal.toFixed(2);
@@ -354,8 +362,12 @@ equal and minimum by default*/
 		
 		console.log("Final price: "+Math.min(priceTotal, priceTotalDiscount));
 	};
-/*Queries the size selected by the user. Size selection is by radio checks, only one entry allowed*/	
-	function showSize() {	
+	
+	function showSize() {
+		for (var i = 0; i < sizeChecked.length; i++) {
+			if (sizeChecked[i].checked)
+				selectedSize = sizeChecked[i].value;
+			}
 			if (selectedSize == "Small") {
 				sizeTotal = 6;
 			} else if (selectedSize == "Medium") {
@@ -407,11 +419,16 @@ equal and minimum by default*/
 /*Queries the cheese selected by the user. Cheese selection is by radio checks, only one entry allowed*/
 /*Only extra cheese incurs a costs*/	
 	function showCheese() {
-			if (selectedCheese == "Regular Cheese") {
+		for (var i = 0; i < cheeseChecked.length; i++) {
+			if (cheeseChecked[i].checked)
+				selectedCheese = cheeseChecked[i].value;
+			}
+	
+			if (selectedCheese === "Regular Cheese") {
 				cheeseTotal = 0;
-			} else if (selectedCheese == "Extra Cheese") {
+			} else if (selectedCheese === "Extra Cheese") {
 				cheeseTotal = 3;
-			} else if (selectedCheese == "No Cheese") {
+			} else if (selectedCheese === "No Cheese") {
 				cheeseTotal = 0;
 			}
 			console.log("selected cheese: "+selectedCheese);
@@ -420,6 +437,10 @@ equal and minimum by default*/
 /*Queries the crust selected by the user. Crust selection is by radio checks, only one entry allowed*/
 /*Only cheese stuffed crust incurs a costs*/	
 	function showCrust() {
+		for (var i = 0; i < crustChecked.length; i++) {
+			if (crustChecked[i].checked)
+				selectedCrust = crustChecked[i].value;
+			}
 			if (selectedCrust == "Thin Crust") {
 				crustTotal = 0;
 			} else if (selectedCrust == "Garlic Butter Crust") {
@@ -437,6 +458,10 @@ equal and minimum by default*/
 /*Queries the sauce selected by the user. Sauce selection is by radio checks, only one entry allowed*/
 /*Sauce does not incur costs*/	
 	function showSauce() {
+		for (var i = 0; i < sauceChecked.length; i++) {
+			if (sauceChecked[i].checked)
+				selectedSauce = sauceChecked[i].value;
+			}
 		console.log("selected sauce: "+selectedSauce);
 	};
 /*calculates the price before and discount*/	
@@ -461,6 +486,16 @@ special price of 90% discount.*/
 			console.log("price before discount: "+priceTotal);
 			console.log("price after discount: "+priceTotalDiscount);
 	};
+	
+		function resetAll() {
+			selectedSize = [];
+			selectedMeat = [];
+			selectedVeggie = [];
+			selectedCheese = [];
+			selectedCrust = [];
+			selectedSauce = [];
+		}
+	
 	</script>
   
   </body>
